@@ -15,6 +15,7 @@
 		7D678FE0211BBD15008576C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D678FDF211BBD15008576C1 /* main.m */; };
 		7D678FEA211BBD15008576C1 /* iOSNavigationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D678FE9211BBD15008576C1 /* iOSNavigationTests.m */; };
 		7D678FF5211BBD15008576C1 /* iOSNavigationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D678FF4211BBD15008576C1 /* iOSNavigationUITests.m */; };
+		7D679003211BBDE0008576C1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7D679002211BBDE0008576C1 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7D678FF0211BBD15008576C1 /* iOSNavigationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D678FF4211BBD15008576C1 /* iOSNavigationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNavigationUITests.m; sourceTree = "<group>"; };
 		7D678FF6211BBD15008576C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D679002211BBDE0008576C1 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7D678FD3211BBD14008576C1 /* ViewController.h */,
 				7D678FD4211BBD14008576C1 /* ViewController.m */,
 				7D678FD6211BBD14008576C1 /* Main.storyboard */,
+				7D679002211BBDE0008576C1 /* images */,
 				7D678FD9211BBD15008576C1 /* Assets.xcassets */,
 				7D678FDB211BBD15008576C1 /* LaunchScreen.storyboard */,
 				7D678FDE211BBD15008576C1 /* Info.plist */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D679003211BBDE0008576C1 /* images in Resources */,
 				7D678FDD211BBD15008576C1 /* LaunchScreen.storyboard in Resources */,
 				7D678FDA211BBD15008576C1 /* Assets.xcassets in Resources */,
 				7D678FD8211BBD14008576C1 /* Main.storyboard in Resources */,
