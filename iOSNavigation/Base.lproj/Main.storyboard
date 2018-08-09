@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wty-0Y-ZKb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,15 +22,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="front_door.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oAK-uo-n73">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="library.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oAK-uo-n73">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="oAK-uo-n73" secondAttribute="height" multiplier="15:8" id="JN5-iY-0GB"/>
+                                    <constraint firstAttribute="width" constant="375" id="mku-bI-YMr"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxo-bE-yy7">
-                                <rect key="frame" x="134" y="550" width="107" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxo-bE-yy7">
+                                <rect key="frame" x="134" y="533" width="107" height="30"/>
                                 <state key="normal" title="Secret Passage"/>
                                 <connections>
                                     <segue destination="z40-Ol-NJc" kind="show" id="5vb-Zc-HPO"/>
@@ -36,7 +38,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oAK-uo-n73" firstAttribute="centerY" secondItem="0M2-dj-gve" secondAttribute="centerY" id="6rq-la-MBZ"/>
+                            <constraint firstItem="oAK-uo-n73" firstAttribute="centerX" secondItem="0M2-dj-gve" secondAttribute="centerX" id="JOc-P6-pX6"/>
+                            <constraint firstItem="vxo-bE-yy7" firstAttribute="centerX" secondItem="0M2-dj-gve" secondAttribute="centerX" id="RfO-9i-AGW"/>
                             <constraint firstItem="oAK-uo-n73" firstAttribute="width" secondItem="oAK-uo-n73" secondAttribute="height" multiplier="15:8" id="b8S-aq-2te"/>
+                            <constraint firstItem="vxo-bE-yy7" firstAttribute="top" secondItem="oAK-uo-n73" secondAttribute="bottom" constant="100" id="s6a-KQ-Mwh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vUf-OE-meB"/>
                     </view>
@@ -53,40 +59,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="front_door.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-ip-HRa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coat_room.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-ip-HRa">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dQr-ip-HRa" secondAttribute="height" multiplier="15:8" id="XNT-9C-AAT"/>
+                                    <constraint firstAttribute="width" secondItem="dQr-ip-HRa" secondAttribute="height" multiplier="15:8" id="2M4-Tt-z4K"/>
+                                    <constraint firstAttribute="width" constant="375" id="xWZ-EZ-Jpa"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ8-Rr-sNy">
-                                <rect key="frame" x="144" y="531" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dining Room"/>
-                                <connections>
-                                    <segue destination="P8i-YT-7G0" kind="show" id="aYb-xV-1xq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgR-F9-gA6">
-                                <rect key="frame" x="267" y="531" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgR-F9-gA6">
+                                <rect key="frame" x="250" y="533" width="63" height="30"/>
                                 <state key="normal" title="Stairs Up"/>
                                 <connections>
                                     <segue destination="SMB-hQ-7Or" kind="show" id="92C-uB-TK6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-j9-uZq">
-                                <rect key="frame" x="66" y="531" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nV-j9-uZq">
+                                <rect key="frame" x="70" y="533" width="48" height="30"/>
                                 <state key="normal" title="Library"/>
                                 <connections>
                                     <segue destination="9ec-Bm-ahg" kind="show" id="qj4-Gy-GUf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ8-Rr-sNy">
+                                <rect key="frame" x="144" y="533" width="87" height="30"/>
+                                <state key="normal" title="Dining Room"/>
+                                <connections>
+                                    <segue destination="P8i-YT-7G0" kind="show" id="aYb-xV-1xq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dQr-ip-HRa" firstAttribute="width" secondItem="dQr-ip-HRa" secondAttribute="height" multiplier="15:8" id="SvE-Bh-cvH"/>
+                            <constraint firstItem="2nV-j9-uZq" firstAttribute="top" secondItem="dQr-ip-HRa" secondAttribute="bottom" constant="100" id="779-bK-95o"/>
+                            <constraint firstItem="fJ8-Rr-sNy" firstAttribute="centerY" secondItem="2nV-j9-uZq" secondAttribute="centerY" id="GCx-Fz-HBL"/>
+                            <constraint firstItem="fJ8-Rr-sNy" firstAttribute="centerX" secondItem="BfN-NN-4Gz" secondAttribute="centerX" id="TQ4-Ux-hOG"/>
+                            <constraint firstItem="2nV-j9-uZq" firstAttribute="centerX" secondItem="BfN-NN-4Gz" secondAttribute="centerX" multiplier="0.5" id="cZR-mo-6re"/>
+                            <constraint firstItem="dQr-ip-HRa" firstAttribute="centerY" secondItem="BfN-NN-4Gz" secondAttribute="centerY" id="lnw-OA-SCY"/>
+                            <constraint firstItem="NgR-F9-gA6" firstAttribute="centerY" secondItem="2nV-j9-uZq" secondAttribute="centerY" id="uot-xW-edP"/>
+                            <constraint firstItem="dQr-ip-HRa" firstAttribute="centerX" secondItem="BfN-NN-4Gz" secondAttribute="centerX" id="vUc-sn-10s"/>
+                            <constraint firstItem="NgR-F9-gA6" firstAttribute="centerX" secondItem="BfN-NN-4Gz" secondAttribute="centerX" multiplier="1.5" id="vct-qF-ADC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FSk-Bv-cXU"/>
                     </view>
@@ -103,18 +114,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dungeon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MKP-aM-Flc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dungeon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MKP-aM-Flc">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MKP-aM-Flc" secondAttribute="height" multiplier="15:8" id="96m-TB-NEf"/>
+                                    <constraint firstAttribute="width" constant="375" id="dFC-IH-H7U"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MKP-aM-Flc" firstAttribute="width" secondItem="MKP-aM-Flc" secondAttribute="height" multiplier="15:8" id="LrK-SO-SLi"/>
-                            <constraint firstItem="MKP-aM-Flc" firstAttribute="width" secondItem="MKP-aM-Flc" secondAttribute="height" multiplier="15:8" id="ZhJ-4v-BXr"/>
-                            <constraint firstItem="MKP-aM-Flc" firstAttribute="width" secondItem="MKP-aM-Flc" secondAttribute="height" multiplier="15:8" id="Zu5-ex-PXV"/>
+                            <constraint firstItem="MKP-aM-Flc" firstAttribute="centerX" secondItem="EqH-J8-Kz9" secondAttribute="centerX" id="0Xe-NN-3aD"/>
+                            <constraint firstItem="MKP-aM-Flc" firstAttribute="centerY" secondItem="EqH-J8-Kz9" secondAttribute="centerY" id="o32-iJ-ePS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DRC-l2-gef"/>
                     </view>
@@ -131,25 +142,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-5s-PiU">
-                                <rect key="frame" x="161" y="554" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-5s-PiU">
+                                <rect key="frame" x="153" y="533" width="69" height="30"/>
                                 <state key="normal" title="Generator"/>
                                 <connections>
                                     <segue destination="KaT-xt-yd3" kind="show" id="feQ-II-xfJ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="labratory.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fla-eA-SWi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="labratory.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fla-eA-SWi">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="ZiT-b5-xAn"/>
                                     <constraint firstAttribute="width" secondItem="Fla-eA-SWi" secondAttribute="height" multiplier="15:8" id="uIk-Kp-qqL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Fla-eA-SWi" firstAttribute="width" secondItem="Fla-eA-SWi" secondAttribute="height" multiplier="15:8" id="F5a-0f-qWc"/>
-                            <constraint firstItem="Fla-eA-SWi" firstAttribute="width" secondItem="Fla-eA-SWi" secondAttribute="height" multiplier="15:8" id="Gg1-AQ-qcT"/>
+                            <constraint firstItem="Fla-eA-SWi" firstAttribute="centerY" secondItem="LSq-3q-oAk" secondAttribute="centerY" id="46h-fC-WPr"/>
+                            <constraint firstItem="3sR-5s-PiU" firstAttribute="top" secondItem="Fla-eA-SWi" secondAttribute="bottom" constant="100" id="Hw0-nT-dFA"/>
+                            <constraint firstItem="Fla-eA-SWi" firstAttribute="centerX" secondItem="LSq-3q-oAk" secondAttribute="centerX" id="OjI-Ha-Umm"/>
+                            <constraint firstItem="3sR-5s-PiU" firstAttribute="centerX" secondItem="LSq-3q-oAk" secondAttribute="centerX" id="tgW-70-EhW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tas-5E-JKG"/>
                     </view>
@@ -166,17 +179,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="generator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TaT-Sa-tBB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TaT-Sa-tBB">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="TaT-Sa-tBB" secondAttribute="height" multiplier="15:8" id="lSF-v6-g2z"/>
+                                    <constraint firstAttribute="width" constant="375" id="ldx-4R-etz"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TaT-Sa-tBB" firstAttribute="width" secondItem="TaT-Sa-tBB" secondAttribute="height" multiplier="15:8" id="1Mp-lF-XdB"/>
                             <constraint firstItem="TaT-Sa-tBB" firstAttribute="width" secondItem="TaT-Sa-tBB" secondAttribute="height" multiplier="15:8" id="IZS-Ps-Gkx"/>
+                            <constraint firstItem="TaT-Sa-tBB" firstAttribute="centerY" secondItem="HF0-73-fSa" secondAttribute="centerY" id="VDG-Ty-P9A"/>
+                            <constraint firstItem="TaT-Sa-tBB" firstAttribute="centerX" secondItem="HF0-73-fSa" secondAttribute="centerX" id="YPa-kZ-2la"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NtX-5q-8Ka"/>
                     </view>
@@ -193,16 +207,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="cursed_chalice.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LQy-Db-Dvw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursed_chalice.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LQy-Db-Dvw">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="LQy-Db-Dvw" secondAttribute="height" multiplier="15:8" id="mBR-F2-tZu"/>
+                                    <constraint firstAttribute="width" constant="375" id="6kJ-gg-HAv"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LQy-Db-Dvw" firstAttribute="width" secondItem="LQy-Db-Dvw" secondAttribute="height" multiplier="15:8" id="6HN-xv-RfQ"/>
+                            <constraint firstItem="LQy-Db-Dvw" firstAttribute="centerX" secondItem="f2O-h7-4hn" secondAttribute="centerX" id="4s4-kh-OlM"/>
+                            <constraint firstItem="LQy-Db-Dvw" firstAttribute="centerY" secondItem="f2O-h7-4hn" secondAttribute="centerY" id="DZk-v9-fSr"/>
                             <constraint firstItem="LQy-Db-Dvw" firstAttribute="width" secondItem="LQy-Db-Dvw" secondAttribute="height" multiplier="15:8" id="geQ-r2-FU6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I3v-9G-TeV"/>
@@ -220,25 +235,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVv-Dq-Qhh">
-                                <rect key="frame" x="148" y="574" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVv-Dq-Qhh">
+                                <rect key="frame" x="135" y="533" width="105" height="30"/>
                                 <state key="normal" title="Cursed Chalice"/>
                                 <connections>
                                     <segue destination="qT8-MH-qeJ" kind="show" id="u1u-eG-1eK"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mysterious_lake.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="T3R-Dv-b0X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mysterious_lake.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="T3R-Dv-b0X">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="T3R-Dv-b0X" secondAttribute="height" multiplier="15:8" id="FoX-uf-ZB8"/>
+                                    <constraint firstAttribute="width" constant="375" id="MEg-Xh-x9G"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="T3R-Dv-b0X" firstAttribute="width" secondItem="T3R-Dv-b0X" secondAttribute="height" multiplier="15:8" id="4DC-KT-rXO"/>
+                            <constraint firstItem="qVv-Dq-Qhh" firstAttribute="top" secondItem="T3R-Dv-b0X" secondAttribute="bottom" constant="100" id="2s2-NX-Kzv"/>
                             <constraint firstItem="T3R-Dv-b0X" firstAttribute="width" secondItem="T3R-Dv-b0X" secondAttribute="height" multiplier="15:8" id="b0q-J9-yHh"/>
+                            <constraint firstItem="T3R-Dv-b0X" firstAttribute="centerY" secondItem="WJi-bh-wpR" secondAttribute="centerY" id="hEZ-y1-sbd"/>
+                            <constraint firstItem="T3R-Dv-b0X" firstAttribute="centerX" secondItem="WJi-bh-wpR" secondAttribute="centerX" id="i4i-QP-KHK"/>
+                            <constraint firstItem="qVv-Dq-Qhh" firstAttribute="centerX" secondItem="WJi-bh-wpR" secondAttribute="centerX" id="qh7-Cx-q1z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t46-Ic-0nQ"/>
                     </view>
@@ -255,31 +272,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="library.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M44-fz-Oeg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secret_passage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M44-fz-Oeg">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="5ei-H6-mCL"/>
                                     <constraint firstAttribute="width" secondItem="M44-fz-Oeg" secondAttribute="height" multiplier="15:8" id="e6L-IB-zYG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Il-dO-srN">
-                                <rect key="frame" x="243" y="534" width="112" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Il-dO-srN">
+                                <rect key="frame" x="225.5" y="533" width="112" height="30"/>
                                 <state key="normal" title="Mysterious Lake"/>
                                 <connections>
                                     <segue destination="yGy-IZ-gnF" kind="show" id="M2l-Sa-xnf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwC-0I-H6m">
-                                <rect key="frame" x="54" y="534" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwC-0I-H6m">
+                                <rect key="frame" x="62.5" y="533" width="63" height="30"/>
                                 <state key="normal" title="Dungeon"/>
                                 <connections>
                                     <segue destination="brA-vW-8M4" kind="show" id="g0C-de-ulx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tql-nQ-dSW">
-                                <rect key="frame" x="154" y="534" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tql-nQ-dSW">
+                                <rect key="frame" x="154" y="533" width="66" height="30"/>
                                 <state key="normal" title="Labratory"/>
                                 <connections>
                                     <segue destination="tmr-tt-Lj2" kind="show" id="Hjw-Tf-cTw"/>
@@ -288,8 +303,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="M44-fz-Oeg" firstAttribute="width" secondItem="M44-fz-Oeg" secondAttribute="height" multiplier="15:8" id="BbQ-5V-cvb"/>
-                            <constraint firstItem="M44-fz-Oeg" firstAttribute="width" secondItem="M44-fz-Oeg" secondAttribute="height" multiplier="15:8" id="mH1-7W-BGA"/>
+                            <constraint firstItem="4Il-dO-srN" firstAttribute="centerY" secondItem="HwC-0I-H6m" secondAttribute="centerY" id="Ehm-4B-ZW2"/>
+                            <constraint firstItem="4Il-dO-srN" firstAttribute="centerX" secondItem="ec0-X3-Aex" secondAttribute="centerX" multiplier="1.5" id="FAY-JW-gcI"/>
+                            <constraint firstItem="4Il-dO-srN" firstAttribute="top" secondItem="M44-fz-Oeg" secondAttribute="bottom" constant="100" id="ICQ-fi-W3y"/>
+                            <constraint firstItem="tql-nQ-dSW" firstAttribute="centerX" secondItem="ec0-X3-Aex" secondAttribute="centerX" id="IJZ-1d-cmJ"/>
+                            <constraint firstItem="M44-fz-Oeg" firstAttribute="centerY" secondItem="ec0-X3-Aex" secondAttribute="centerY" id="lBu-lf-o6W"/>
+                            <constraint firstItem="M44-fz-Oeg" firstAttribute="centerX" secondItem="ec0-X3-Aex" secondAttribute="centerX" id="lUL-pC-CCp"/>
+                            <constraint firstItem="tql-nQ-dSW" firstAttribute="centerY" secondItem="HwC-0I-H6m" secondAttribute="centerY" id="lwq-qC-Mfn"/>
+                            <constraint firstItem="HwC-0I-H6m" firstAttribute="centerX" secondItem="ec0-X3-Aex" secondAttribute="centerX" multiplier="0.5" id="q7z-I8-peV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KgT-6h-FEC"/>
                     </view>
@@ -306,15 +327,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dining_room.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aua-zU-TjK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dining_room.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aua-zU-TjK">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="aua-zU-TjK" secondAttribute="height" multiplier="15:8" id="Ckt-Nf-5uc"/>
+                                    <constraint firstAttribute="width" constant="375" id="bMe-O0-cdS"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-Nq-DWo">
-                                <rect key="frame" x="167" y="552" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-Nq-DWo">
+                                <rect key="frame" x="162" y="533" width="52" height="30"/>
                                 <state key="normal" title="Kitchen"/>
                                 <connections>
                                     <segue destination="K4G-5D-E4C" kind="show" id="mKX-au-gDe"/>
@@ -323,7 +343,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aua-zU-TjK" firstAttribute="leading" secondItem="Glb-Pq-aKQ" secondAttribute="leading" id="WDp-SW-8YM"/>
+                            <constraint firstItem="56c-Nq-DWo" firstAttribute="centerX" secondItem="jx2-Nq-r9m" secondAttribute="centerX" id="hFL-CU-8lw"/>
                             <constraint firstItem="aua-zU-TjK" firstAttribute="width" secondItem="aua-zU-TjK" secondAttribute="height" multiplier="15:8" id="mIB-qk-aqG"/>
+                            <constraint firstItem="aua-zU-TjK" firstAttribute="centerY" secondItem="jx2-Nq-r9m" secondAttribute="centerY" id="tGG-pc-Wz2"/>
+                            <constraint firstItem="aua-zU-TjK" firstAttribute="centerX" secondItem="jx2-Nq-r9m" secondAttribute="centerX" id="uL0-i6-oub"/>
+                            <constraint firstItem="56c-Nq-DWo" firstAttribute="top" secondItem="aua-zU-TjK" secondAttribute="bottom" constant="100" id="vDF-KD-ujk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Glb-Pq-aKQ"/>
                     </view>
@@ -340,24 +365,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-Vo-qlz">
-                                <rect key="frame" x="142" y="530" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-Vo-qlz">
+                                <rect key="frame" x="149" y="533" width="78" height="30"/>
                                 <state key="normal" title="Back Porch"/>
                                 <connections>
                                     <segue destination="fjq-tL-NFc" kind="show" id="8UA-gS-Acx"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="kitchen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-m2-8eM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bMp-m2-8eM">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="bMp-m2-8eM" secondAttribute="height" multiplier="15:8" id="xXs-lo-XeI"/>
+                                    <constraint firstAttribute="width" constant="375" id="6aI-nh-KGf"/>
+                                    <constraint firstAttribute="width" secondItem="bMp-m2-8eM" secondAttribute="height" multiplier="15:8" id="g4k-Ga-Dhx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bMp-m2-8eM" firstAttribute="width" secondItem="bMp-m2-8eM" secondAttribute="height" multiplier="15:8" id="dwq-Z1-kVG"/>
+                            <constraint firstItem="vjV-Vo-qlz" firstAttribute="top" secondItem="bMp-m2-8eM" secondAttribute="bottom" constant="100" id="2gS-RS-hZo"/>
+                            <constraint firstItem="bMp-m2-8eM" firstAttribute="centerY" secondItem="1rS-kh-mIQ" secondAttribute="centerY" id="Tha-Tf-pWe"/>
+                            <constraint firstItem="vjV-Vo-qlz" firstAttribute="centerX" secondItem="1rS-kh-mIQ" secondAttribute="centerX" id="jVA-8W-ikN"/>
+                            <constraint firstItem="bMp-m2-8eM" firstAttribute="centerX" secondItem="1rS-kh-mIQ" secondAttribute="centerX" id="oZ2-0h-PIh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4f6-9h-T8G"/>
                     </view>
@@ -374,17 +402,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bedroom.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LcY-xk-cDU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bedroom.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LcY-xk-cDU">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LcY-xk-cDU" secondAttribute="height" multiplier="15:8" id="Hhy-yK-MIs"/>
+                                    <constraint firstAttribute="width" constant="375" id="N33-Ja-Hwf"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LcY-xk-cDU" firstAttribute="width" secondItem="LcY-xk-cDU" secondAttribute="height" multiplier="15:8" id="USw-CJ-48h"/>
-                            <constraint firstItem="LcY-xk-cDU" firstAttribute="width" secondItem="LcY-xk-cDU" secondAttribute="height" multiplier="15:8" id="kht-ar-ZzU"/>
+                            <constraint firstItem="LcY-xk-cDU" firstAttribute="centerX" secondItem="MaD-Mc-K8h" secondAttribute="centerX" id="Qzm-v7-Hco"/>
+                            <constraint firstItem="LcY-xk-cDU" firstAttribute="centerY" secondItem="MaD-Mc-K8h" secondAttribute="centerY" id="iUm-Rp-ouz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rq3-LF-MBI"/>
                     </view>
@@ -401,18 +430,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bathroom.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-Uu-V7z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bathroom.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-Uu-V7z">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MTk-Uu-V7z" secondAttribute="height" multiplier="15:8" id="7Fz-D7-rBO"/>
+                                    <constraint firstAttribute="width" constant="375" id="Y8K-py-18p"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MTk-Uu-V7z" firstAttribute="width" secondItem="MTk-Uu-V7z" secondAttribute="height" multiplier="15:8" id="91Q-5Q-WtP"/>
-                            <constraint firstItem="MTk-Uu-V7z" firstAttribute="width" secondItem="MTk-Uu-V7z" secondAttribute="height" multiplier="15:8" id="J6P-Gj-rJw"/>
-                            <constraint firstItem="MTk-Uu-V7z" firstAttribute="width" secondItem="MTk-Uu-V7z" secondAttribute="height" multiplier="15:8" id="OhK-u7-rUz"/>
+                            <constraint firstItem="MTk-Uu-V7z" firstAttribute="centerY" secondItem="sU4-bg-qUK" secondAttribute="centerY" id="Ing-N8-TRD"/>
+                            <constraint firstItem="MTk-Uu-V7z" firstAttribute="centerX" secondItem="sU4-bg-qUK" secondAttribute="centerX" id="WRV-s2-sgX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YOz-Iu-W4n"/>
                     </view>
@@ -429,16 +458,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="back_porch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V0R-Wa-93w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_porch.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V0R-Wa-93w">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="V0R-Wa-93w" secondAttribute="height" multiplier="15:8" id="QWw-Cc-ANZ"/>
+                                    <constraint firstAttribute="width" constant="375" id="rO2-5g-SdP"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="V0R-Wa-93w" firstAttribute="width" secondItem="V0R-Wa-93w" secondAttribute="height" multiplier="15:8" id="1Gs-kc-h9p"/>
+                            <constraint firstItem="V0R-Wa-93w" firstAttribute="centerY" secondItem="rnE-sV-9vo" secondAttribute="centerY" id="Nac-B7-Sqp"/>
+                            <constraint firstItem="V0R-Wa-93w" firstAttribute="centerX" secondItem="rnE-sV-9vo" secondAttribute="centerX" id="j26-nT-oYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tBo-EF-xTL"/>
                     </view>
@@ -455,23 +486,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yip-ic-FxW">
-                                <rect key="frame" x="142" y="553" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yip-ic-FxW">
+                                <rect key="frame" x="203" y="533" width="63" height="30"/>
                                 <state key="normal" title="Bedroom"/>
                                 <connections>
                                     <segue destination="Hnm-s8-Kfa" kind="show" id="Rzz-t7-QMX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="stairs_up.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-Aa-5dk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stairs_up.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DJI-Aa-5dk">
                                 <rect key="frame" x="0.0" y="233" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DJI-Aa-5dk" secondAttribute="height" multiplier="15:8" id="lXJ-N3-gq9"/>
+                                    <constraint firstAttribute="width" constant="375" id="Qge-Pu-qBz"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-AC-K6P">
-                                <rect key="frame" x="231" y="553" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-AC-K6P">
+                                <rect key="frame" x="107" y="533" width="67" height="30"/>
                                 <state key="normal" title="Bathroom"/>
                                 <connections>
                                     <segue destination="6gS-fw-aV1" kind="show" id="iy3-gT-G5X"/>
@@ -480,8 +509,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yip-ic-FxW" firstAttribute="centerX" secondItem="RlD-1y-l9f" secondAttribute="centerX" multiplier="1.25" id="6O4-5r-FTg"/>
+                            <constraint firstItem="6n5-AC-K6P" firstAttribute="centerY" secondItem="yip-ic-FxW" secondAttribute="centerY" id="8V6-DT-VPT"/>
+                            <constraint firstItem="6n5-AC-K6P" firstAttribute="centerX" secondItem="RlD-1y-l9f" secondAttribute="centerX" multiplier="0.75" id="P0Z-aA-cbE"/>
+                            <constraint firstItem="yip-ic-FxW" firstAttribute="top" secondItem="DJI-Aa-5dk" secondAttribute="bottom" constant="100" id="P87-yN-W6h"/>
                             <constraint firstItem="DJI-Aa-5dk" firstAttribute="width" secondItem="DJI-Aa-5dk" secondAttribute="height" multiplier="15:8" id="YDZ-HF-fAT"/>
-                            <constraint firstItem="DJI-Aa-5dk" firstAttribute="width" secondItem="DJI-Aa-5dk" secondAttribute="height" multiplier="15:8" id="nyO-5C-H3h"/>
+                            <constraint firstItem="DJI-Aa-5dk" firstAttribute="leading" secondItem="RlD-1y-l9f" secondAttribute="leading" id="gc0-dE-Ulw"/>
+                            <constraint firstItem="DJI-Aa-5dk" firstAttribute="centerY" secondItem="RlD-1y-l9f" secondAttribute="centerY" id="tk0-vE-ixS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ede-LM-gLI"/>
                     </view>
@@ -504,9 +538,8 @@
                                     <constraint firstAttribute="width" secondItem="tBE-vW-al0" secondAttribute="height" multiplier="15:8" id="Og2-F6-YNw"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-5m-YBY">
-                                <rect key="frame" x="149" y="494" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-5m-YBY">
+                                <rect key="frame" x="149" y="533.5" width="76" height="30"/>
                                 <state key="normal" title="Coat Room"/>
                                 <connections>
                                     <segue destination="oxU-Us-RQ0" kind="show" id="c71-0r-lXx"/>
@@ -515,10 +548,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tBE-vW-al0" secondAttribute="trailing" id="Z8I-Dd-B1z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tBE-vW-al0" secondAttribute="trailingMargin" constant="8" id="Z8I-Dd-B1z"/>
+                            <constraint firstItem="3I4-5m-YBY" firstAttribute="top" secondItem="tBE-vW-al0" secondAttribute="bottom" constant="100" id="cTM-43-gyd"/>
+                            <constraint firstItem="3I4-5m-YBY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jwl-N7-l6z"/>
                             <constraint firstItem="tBE-vW-al0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="krW-h0-TWw"/>
                             <constraint firstItem="tBE-vW-al0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="stg-SM-0cm"/>
-                            <constraint firstItem="tBE-vW-al0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ttP-Vq-Ubs"/>
+                            <constraint firstItem="tBE-vW-al0" firstAttribute="leadingMargin" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ttP-Vq-Ubs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -551,6 +586,7 @@
         <image name="back_porch.jpg" width="1024" height="1024"/>
         <image name="bathroom.jpg" width="1024" height="1024"/>
         <image name="bedroom.jpg" width="1024" height="1024"/>
+        <image name="coat_room.jpg" width="1024" height="1024"/>
         <image name="cursed_chalice.jpg" width="1024" height="1024"/>
         <image name="dining_room.jpg" width="1024" height="1024"/>
         <image name="dungeon.jpg" width="1024" height="1024"/>
@@ -560,6 +596,7 @@
         <image name="labratory.jpg" width="1024" height="1024"/>
         <image name="library.jpg" width="1024" height="1001"/>
         <image name="mysterious_lake.jpg" width="1024" height="1024"/>
+        <image name="secret_passage.jpg" width="1024" height="1001"/>
         <image name="stairs_up.jpg" width="1024" height="1001"/>
     </resources>
 </document>
